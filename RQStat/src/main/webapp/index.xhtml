@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<head>
+  <title>RQStat</title>
+</head>
+<body>
+  <h1><h:outputText value="RQStat"/></h1>
+  <h2><h:outputText value="User Login"/></h2>
+  
+  <h:form id="form">
+  	<h:panelGrid id="grid" columns="2">
+  		<h:outputLabel value="Username:" for="userName"></h:outputLabel>
+  		<h:inputText id="userName"
+  			value="#{user.userName}" />
+  		<h:outputLabel value="Password:" for="passWord"></h:outputLabel>
+  		<h:inputText id="passWord"
+  			value="#{user.passWord}" />
+  		<h:commandButton id="login" value="login"
+  			action="#{user.login}" />
+  	</h:panelGrid>
+  </h:form>
+</body>
+</html>
